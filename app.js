@@ -47,3 +47,72 @@ function square(a) {
     document.write(`<h1>The Square is: ${squaring}</h1>`);
     
 }
+
+function factorial(a) {
+    
+    let emp = 1;
+    for (let i = a; i > 0; i--) {
+    emp *= i
+    
+    }
+    document.write(`<h1> ${emp} </h1>`);
+}
+
+function counting(a,b) {
+    for (let i = a; i < b; i++) {
+        document.write(`<h1> ${i} </h1>`)
+        
+    }
+    
+}
+
+function palindrome() {
+    let name1 = prompt("Enter A Word")
+    let name2 = name1.split().reverse().join()
+    if (name1 == name2) {
+        document.write(`<h1> ${name1} is a palindrome word </h1>`)
+    } else {
+        document.write(`<h1> ${name1} is a not palindrome word </h1>`)
+        
+    }
+    
+}
+
+function capital() {
+    let capitalize = prompt("Enter anything, I will convert its first letter into capital");
+    let arr = capitalize.split(" ");
+    for (var i = 0; i < arr.length; i++) {
+        arr[i] = arr[i][0].toUpperCase() + arr[i].slice(1);
+    }
+    let result = arr.join(" ");
+    document.write(`<h1>${result}</h1>`);
+    // console.log(result);
+}
+
+function large(){
+    var user = prompt("Enter a Word Or para I wil Tell u large letter")
+    user = user.split(" ")
+    var length = 0
+    var find = ""
+    for(var i = 0 ; i < user.length ; i++){
+        if(user[i].length > length){
+            length = user[i].length
+            find = user[i]
+            console.log(find);
+        }
+    }
+}
+
+function finding(a, b) {
+    let data = 0;
+    for (let i = 0; i < a.length; i++) {
+        if (a[i] === b) {
+            data++;
+        }
+    }
+    if (data > 0) {
+        document.write(`<h1>The letter '${b}' was found ${data} times.</h1>`);
+    } else {
+        document.write(`<h1>No letter '${b}' found.</h1>`);
+    }
+}
