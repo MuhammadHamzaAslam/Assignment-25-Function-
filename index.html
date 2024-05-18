@@ -4,19 +4,134 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Functions</title>
+    <style>
+        body{
+            background-image: radial-gradient(circle at center center, transparent,rgb(33,33,33)),repeating-linear-gradient(135deg, rgb(33,33,33) 0px, rgb(33,33,33) 2px,transparent 2px, transparent 10px,rgb(33,33,33) 10px, rgb(33,33,33) 11px,transparent 11px, transparent 21px),repeating-linear-gradient(45deg, rgb(47,47,47) 0px, rgb(47,47,47) 4px,transparent 4px, transparent 8px),linear-gradient(90deg, rgb(33,33,33),rgb(33,33,33));
+        }
+        body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    --c: goldenrod;
+    color: var(--c);
+    font-size: 16px;
+    border: 0.3em solid var(--c);
+    border-radius: 0.5em;
+    width: 12em;
+    height: 3em;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: sans-serif;
+    letter-spacing: 0.1em;
+    text-align: center;
+    line-height: 3em;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: 0.5s;
+    margin: 1em;
+}
+
+nav ul li span {
+    position: absolute;
+    width: 25%;
+    height: 100%;
+    background-color: var(--c);
+    transform: translateY(150%);
+    border-radius: 50%;
+    left: calc((var(--n) - 1) * 25%);
+    transition: 0.5s;
+    transition-delay: calc((var(--n) - 1) * 0.1s);
+    z-index: -1;
+}
+
+nav ul li:hover {
+    color: black;
+}
+
+nav ul li:hover span {
+    transform: translateY(0) scale(2);
+}
+
+nav ul li span:nth-child(1) {
+    --n: 1;
+}
+
+nav ul li span:nth-child(2) {
+    --n: 2;
+}
+
+nav ul li span:nth-child(3) {
+    --n: 3;
+}
+
+nav ul li span:nth-child(4) {
+    --n: 4;
+}
+
+    </style>
 </head>
 <body>
-    <button onclick="date1()">Show Me Date</button>
-    <button onclick="greet()">Greet</button>
-    <button onclick="sum()">Sum</button>
-    <button onclick="calculator()">calcualtor</button>
-    <button onclick="square(parseInt(prompt('Enter A Number')))">Squaring</button>
-    <button onclick="factorial(parseInt(prompt('Enter A Number')))">Factorial</button>
-    <button onclick="counting(parseInt(prompt('Enter A Start Number')),parseInt(prompt('Enter a End Number')))">Counting</button>
-    <button onclick="palindrome()">Palindrome</button>
-    <button onclick="capital()">Capital</button>
-    <button onclick="large()">large</button>
-    <button onclick="finding(prompt('Enter a word'),prompt('Enter a letter'))">Length</button>
+    <nav>
+        <ul>
+          <li onclick="date1()">
+            Show Me Date
+            <span></span><span></span><span></span><span></span>
+          </li>
+          <li onclick="greet()">
+            Greet
+            <span></span><span></span><span></span><span></span>
+          </li>
+          <li onclick="sum()">
+            Sum
+            <span></span><span></span><span></span><span></span>
+          </li>
+          <li onclick="calculator()">
+            Calculator
+            <span></span><span></span><span></span><span></span>
+          </li>
+          <li onclick="square(parseInt(prompt('Enter A Number')))">
+            Square
+            <span></span><span></span><span></span><span></span>
+          </li>
+          <li onclick="factorial(parseInt(prompt('Enter A Number')))">
+            Factorial
+            <span></span><span></span><span></span><span></span>
+          </li>
+          <li onclick="counting(parseInt(prompt('Enter A Start Number')),parseInt(prompt('Enter a End Number')))">
+            Counting
+            <span></span><span></span><span></span><span></span>
+          </li>
+          <li onclick="palindrome()">
+            Palindrome
+            <span></span><span></span><span></span><span></span>
+          </li>
+          <li onclick="capital()">
+            Capital
+            <span></span><span></span><span></span><span></span>
+          </li>
+          <li onclick="large()">
+            Large
+            <span></span><span></span><span></span><span></span>
+          </li>
+          <li onclick="finding(prompt('Enter a word'),prompt('Enter a letter'))">
+            Finging
+            <span></span><span></span><span></span><span></span>
+          </li>
+        </ul>
+      </nav>
 
     <script src="app.js"></script>
 </body>
